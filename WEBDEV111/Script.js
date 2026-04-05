@@ -138,6 +138,18 @@ function updateThemeIcon(theme) {
   }
 }
 
+function updateThemeIcon(theme) {
+  const logoImg = document.getElementById('mainLogo');
+  
+  if (theme === 'dark') {
+    themeIcon.className = 'fa-solid fa-moon';
+    logoImg.src = 'assets/logo-white.png'; // Path to your dark-mode friendly logo
+  } else {
+    themeIcon.className = 'fa-solid fa-sun';
+    logoImg.src = 'assets/logo-dark.png';  // Path to your light-mode friendly logo
+  }
+}
+
 
 // =============================================
 //  7. CURRENCY SWITCHER

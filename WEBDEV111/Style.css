@@ -328,6 +328,7 @@ section { padding: 100px 5%; }
   color: var(--navy);
   line-height: 1;
 }
+
 .logo-text span {
   display: block;
   font-size: 0.65rem;
@@ -337,7 +338,13 @@ section { padding: 100px 5%; }
   text-transform: uppercase;
   color: var(--text-muted);
 }
-[data-theme="dark"] .logo-text { color: var(--yellow); }
+
+/* Hide the dark-theme logo by default */
+.dark-logo { display: none; }
+
+/* When data-theme is dark, swap visibility */
+[data-theme="dark"] .light-logo { display: none; }
+[data-theme="dark"] .dark-logo { display: block; }
 
 /* Nav list */
 .main-nav { position: relative; }

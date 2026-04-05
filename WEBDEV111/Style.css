@@ -185,7 +185,7 @@ section { padding: 100px 5%; }
 .modal-overlay.hidden { display: none; }
 
 .modal-box {
-  background: var(--surface);
+  background: #eaeae4;
   border-radius: var(--radius);
   padding: 48px 40px;
   max-width: 460px;
@@ -339,12 +339,33 @@ section { padding: 100px 5%; }
   color: var(--text-muted);
 }
 
-/* Hide the dark-theme logo by default */
+/* 1. Default State (Light Mode) */
 .dark-logo { display: none; }
+.light-logo { display: block; }
+.logo-text { color: #001f3f; } /* Your Navy color */
 
-/* When data-theme is dark, swap visibility */
-[data-theme="dark"] .light-logo { display: none; }
-[data-theme="dark"] .dark-logo { display: block; }
+/* 2. Dark Mode State */
+
+/* Hide the light logo when theme is dark */
+[data-theme="dark"] .light-logo { 
+  display: none; 
+}
+
+/* Show the dark logo when theme is dark */
+[data-theme="dark"] .dark-logo { 
+  display: block; 
+}
+
+[data-theme="dark"] .logo-text {
+  color: #ffffff; 
+}
+
+/* Ensure images fit the container */
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 /* Nav list */
 .main-nav { position: relative; }

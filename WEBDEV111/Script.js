@@ -112,44 +112,32 @@ document.addEventListener('keydown', e => {
 // =============================================
 //  6. LIGHT / DARK MODE TOGGLE
 // =============================================
-const themeToggle = $('themeToggle');
-const themeIcon   = $('themeIcon');
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon   = document.getElementById('themeIcon');
 const htmlEl      = document.documentElement;
 
-// Load saved preference from localStorage
 const savedTheme = localStorage.getItem('cssp-theme') || 'light';
 htmlEl.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
+updateThemeUI(savedTheme);
 
 themeToggle.addEventListener('click', () => {
   const current = htmlEl.getAttribute('data-theme');
   const next    = current === 'light' ? 'dark' : 'light';
+  
   htmlEl.setAttribute('data-theme', next);
-  localStorage.setItem('cssp-theme', next); // save preference
-  updateThemeIcon(next);
+  localStorage.setItem('cssp-theme', next);
+  updateThemeUI(next);
 });
 
-// Swap icon between sun and moon based on theme
-function updateThemeIcon(theme) {
+function updateThemeUI(theme) {
+  // We only need to toggle the icon here; 
+  // CSS handles the logo images automatically via the [data-theme] attribute
   if (theme === 'dark') {
     themeIcon.className = 'fa-solid fa-moon';
   } else {
     themeIcon.className = 'fa-solid fa-sun';
   }
 }
-
-function updateThemeIcon(theme) {
-  const logoImg = document.getElementById('mainLogo');
-  
-  if (theme === 'dark') {
-    themeIcon.className = 'fa-solid fa-moon';
-    logoImg.src = 'assets/logo-white.png'; // Path to your dark-mode friendly logo
-  } else {
-    themeIcon.className = 'fa-solid fa-sun';
-    logoImg.src = 'assets/logo-dark.png';  // Path to your light-mode friendly logo
-  }
-}
-
 
 // =============================================
 //  7. CURRENCY SWITCHER

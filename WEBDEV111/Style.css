@@ -40,9 +40,15 @@
 
 
 /* ===== RESET & BASE ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { 
+  scroll-behavior: smooth; 
+  font-size: 16px; }
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -52,12 +58,32 @@ body {
   transition: background-color var(--transition), color var(--transition);
 }
 
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-img { display: block; width: 100%; object-fit: cover; }
-button { cursor: pointer; border: none; background: none; font-family: inherit; }
+a { 
+  text-decoration: none; 
+  color: inherit; 
+}
 
-h1, h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 1.1; }
+ul { 
+  list-style: none; 
+}
+
+img { 
+  display: block; 
+  width: 100%; 
+  object-fit: cover; 
+}
+
+button { 
+  cursor: pointer; 
+  border: none; 
+  background: none; 
+  font-family: inherit; 
+}
+
+h1, h2, h3, h4 { 
+  font-family: 'Bebas Neue', sans-serif; 
+  letter-spacing: 0.02em; 
+  line-height: 1.1; }
 
 
 /* ===== COMMON BUTTON STYLES ===== */
@@ -143,9 +169,7 @@ h1, h2, h3, h4 { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; 
 section { padding: 100px 5%; }
 
 
-/* =============================================
-   SALES MODAL
-   ============================================= */
+/* SALES MODAL */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -157,6 +181,7 @@ section { padding: 100px 5%; }
   backdrop-filter: blur(4px);
   animation: fadeIn 0.4s ease;
 }
+
 .modal-overlay.hidden { display: none; }
 
 .modal-box {
@@ -279,18 +304,23 @@ section { padding: 100px 5%; }
   gap: 10px;
   text-decoration: none;
 }
+
 .logo-icon {
-  width: 42px; height: 42px;
-  background: var(--navy);
-  color: var(--yellow);
+  width: 42px; 
+  height: 42px;
+  /*background: var(--navy);
+  color: var(--yellow);*/
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  /*font-size: 1.2rem;*/
   transition: var(--transition);
 }
-.logo-wrap:hover .logo-icon { transform: rotate(-8deg) scale(1.08); }
+
+.logo-wrap:hover .logo-icon { 
+  transform: rotate(-8deg) scale(1.08); 
+}
 
 .logo-text {
   font-family: 'Bebas Neue', sans-serif;

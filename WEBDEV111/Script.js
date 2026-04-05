@@ -22,7 +22,6 @@ window.addEventListener('load', () => {
 
 // Close the modal when user clicks X or skip text
 $('closeModal').addEventListener('click', closeModal);
-$('skipModal').addEventListener('click', closeModal);
 $('claimOffer').addEventListener('click', closeModal);
 
 // Close if they click the dark backdrop

@@ -11,8 +11,7 @@ getElementById/querySelectorAll - para makuha yung target na u want
 const $ = id => document.getElementById(id);
 const $$ = sel => document.querySelectorAll(sel);
 
-/* infinite ticker 
-2nd part
+/* 2nd part - "preheader infinite ticker"
 1st line - ginamit yung helper para short lang yung pagkuha sa variable 
 2nd line (if statement) - to make sure if meron ba talagang ticker 
 3rd line -
@@ -28,7 +27,16 @@ if (tickerTrack) {
 }
 
 
-/* sticky header - 
+/* 3rd part - "sticky header" if user is mag-scroll magkaka-shadow then maga-appear alw yung navbar!
+1st line - helper 
+2nd line - 
+     window - browser window (maglo-locate saang part na yung user sa webpage)
+     addEventListener - maga-assign ano action ang need gawin para ma-trigger
+     scroll - if mag-scroll ang user then
+3rd line - 
+     if statement - if na-cross ng user ang 50px na scroll magpapakita yung shadow na nakalagay sa css
+     else statement - if bumalik na yung user around 50 px, mare-remove yung shadow na
+*/
 const header = $('siteHeader');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -39,9 +47,10 @@ window.addEventListener('scroll', () => {
 });
 
 
-// =============================================
-//  4. HAMBURGER MENU (Mobile nav toggle)
-// =============================================
+/* haembeogeo (mobile nav)
+
+
+
 const hamburger = $('hamburger');
 const mainNav   = $('mainNav');
 

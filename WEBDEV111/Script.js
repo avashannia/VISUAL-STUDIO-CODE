@@ -8,32 +8,6 @@
 const $ = id => document.getElementById(id);
 const $$ = sel => document.querySelectorAll(sel);
 
-
-// =============================================
-//  1. SALES POP-UP MODAL
-//  Shows on page load after a short delay
-// =============================================
-window.addEventListener('load', () => {
-  // Wait 1.2 seconds then show the modal
-  setTimeout(() => {
-    $('salesModal').classList.remove('hidden');
-  }, 1200);
-});
-
-// Close the modal when user clicks X or skip text
-$('closeModal').addEventListener('click', closeModal);
-$('claimOffer').addEventListener('click', closeModal);
-
-// Close if they click the dark backdrop
-$('salesModal').addEventListener('click', e => {
-  if (e.target === $('salesModal')) closeModal();
-});
-
-function closeModal() {
-  $('salesModal').classList.add('hidden');
-}
-
-
 // =============================================
 //  2. PRE-HEADER TICKER (Infinite scroll)
 //  Clones itself so the animation loops forever

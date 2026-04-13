@@ -1,6 +1,5 @@
 /* CSSP Garments Trading – style.css
    Fonts: Bebas Neue (display) + DM Sans (body) */
-
 /* ===== CSS VARIABLES (THEME SYSTEM) ===== */
 /* Light mode defaults – dark mode overrides below */
 :root {
@@ -46,7 +45,6 @@
 }
 
 /* Creato Display - For Body (Lookalike for DM Sans) */
-/* We'll define Regular, Medium, and Bold weights */
 
 @font-face {
   font-family: 'Creato Display';
@@ -104,9 +102,10 @@ button {
 }
 
 h1, h2, h3, h4 { 
-  font-family: 'Bebas Neue', sans-serif; 
+  font-family: 'Bebas Neue Custom', sans-serif; 
   letter-spacing: 0.02em; 
-  line-height: 1.1; }
+  line-height: 1.1; 
+}
 
 
 /* ===== COMMON BUTTON STYLES ===== */
@@ -270,7 +269,7 @@ section { padding: 100px 5%; }
 }
 
 .logo-text {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Custom', sans-serif;
   font-size: 1.5rem;
   color: var(--navy);
   line-height: 1;
@@ -279,7 +278,7 @@ section { padding: 100px 5%; }
 .logo-text span {
   display: block;
   font-size: 0.65rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Creato Display', sans-serif;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -611,7 +610,7 @@ section { padding: 100px 5%; }
 }
 .stat strong {
   display: block;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Custom', sans-serif;
   font-size: 2rem;
   color: var(--navy);
 }
@@ -827,13 +826,13 @@ section { padding: 100px 5%; }
 }
 .card-name {
   font-size: 1.1rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Creato Display', sans-serif;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 8px;
 }
 .card-price {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Custom', sans-serif;
   font-size: 1.4rem;
   color: var(--navy);
   letter-spacing: 0.04em;
@@ -1105,7 +1104,7 @@ section { padding: 100px 5%; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Custom', sans-serif;
   font-size: 1.6rem;
   color: var(--yellow);
   margin-bottom: 16px;
@@ -1132,7 +1131,7 @@ section { padding: 100px 5%; }
 .social-icons a:hover { background: var(--yellow); color: var(--navy); transform: translateY(-3px); }
 
 .footer-col h4 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Custom', sans-serif;
   font-size: 1.3rem;
   color: var(--yellow);
   margin-bottom: 20px;

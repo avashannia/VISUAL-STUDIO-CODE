@@ -1218,6 +1218,7 @@ section { padding: 100px 5%; }
   color: rgba(255,255,255,0.45);
   max-width: 1300px;
   margin: 0 auto;
+  line-height: 2em;
 }
 .legal-links { display: flex; gap: 20px; }
 .legal-links a {

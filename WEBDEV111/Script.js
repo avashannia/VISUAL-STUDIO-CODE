@@ -1,29 +1,34 @@
-// =============================================
-//  CSSP Garments Trading – script.js
-//  Clean, well-commented Vanilla JS
-// =============================================
+// javascript tutorial 101 
 
-
-// ===== HELPER: grab elements easily =====
+/* 1st part is called "helper", shortcut for grabbing isang specific element 
+const - short for "constant", means never nagbabago, once na ma-set shortcut, it's okay na alw
+$ - nickname 
+id/sel - sel short for "selector"; more on "target" like anong element
+=> - arrow function!! ipo-point out ano gagawing action after
+document - the whole website element
+getElementById/querySelectorAll - para makuha yung target na u want
+*/
 const $ = id => document.getElementById(id);
 const $$ = sel => document.querySelectorAll(sel);
 
-// =============================================
-//  2. PRE-HEADER TICKER (Infinite scroll)
-//  Clones itself so the animation loops forever
-// =============================================
+/* infinite ticker 
+2nd part
+1st line - ginamit yung helper para short lang yung pagkuha sa variable 
+2nd line (if statement) - to make sure if meron ba talagang ticker 
+3rd line -
+     clone - duplicate or copy 
+     .innerHTML - yung content ng tickerTrack sa html like yung list 
+4th line - 
+     += - after mapakita yung list, idagdag mo ulit yung nasa unahan para it looks infinite
+*/
 const tickerTrack = $('tickerTrack');
 if (tickerTrack) {
-  // Clone all the ticker items and append them
-  // This creates a seamless infinite loop effect
   const clone = tickerTrack.innerHTML;
   tickerTrack.innerHTML += clone; // duplicate content
 }
 
 
-// =============================================
-//  3. STICKY HEADER – adds shadow on scroll
-// =============================================
+/* sticky header - 
 const header = $('siteHeader');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {

@@ -84,8 +84,7 @@ lam mo na yan
 7th line - 
      focus - after ma-open, automatic mag-blink yung cursor yey
 ... line - user can pindot esc sa keyboard then magdi-disappear na 
-
-
+*/
 const searchToggle = $('searchToggle');
 const searchBar    = $('searchBar');
 const searchInput  = $('searchInput');
@@ -108,6 +107,11 @@ document.addEventListener('keydown', e => {
 /* 6th part - logo dim and light mode 
 1st paragraph - helper
 2nd paragraph -
+      1st line - 
+      localStorage - file handling sa c
+      'light' - default na choice 
+      2nd line - 
+      setAttribute - if pindutin ang data-them
     
 */
 const themeToggle = document.getElementById('themeToggle');

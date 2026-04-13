@@ -79,6 +79,12 @@ $$('.nav-item.has-mega .nav-link').forEach(link => {
 
 
 /* 5th part - search bar 
+lam mo na yan 
+1st to 3rd line - helper 
+7th line - 
+     focus - after ma-open, automatic mag-blink yung cursor yey
+... line - user can pindot esc sa keyboard then magdi-disappear na 
+
 
 const searchToggle = $('searchToggle');
 const searchBar    = $('searchBar');
@@ -87,11 +93,10 @@ const searchInput  = $('searchInput');
 searchToggle.addEventListener('click', () => {
   searchBar.classList.toggle('open');
   if (searchBar.classList.contains('open')) {
-    searchInput.focus(); // auto-focus the input when opened
+    searchInput.focus(); 
   }
 });
 
-// Close search bar if user presses Escape key
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     searchBar.classList.remove('open');
@@ -100,10 +105,11 @@ document.addEventListener('keydown', e => {
   }
 });
 
-
-// =============================================
-//  6. LIGHT / DARK MODE TOGGLE
-// =============================================
+/* 6th part - logo dim and light mode 
+1st paragraph - helper
+2nd paragraph -
+    
+*/
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon   = document.getElementById('themeIcon');
 const htmlEl      = document.documentElement;

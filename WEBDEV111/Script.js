@@ -18,7 +18,7 @@ const $$ = sel => document.querySelectorAll(sel);
      clone - duplicate or copy 
      .innerHTML - yung content ng tickerTrack sa html like yung list 
 4th line - 
-     += - after mapakita yung list, idagdag mo ulit yung nasa unahan para it looks infinite
+     += - after ma-end yung list, ipapakita ulit yung nasa unahan kaagad para it looks infinite
 */
 const tickerTrack = $('tickerTrack');
 if (tickerTrack) {
@@ -35,7 +35,7 @@ if (tickerTrack) {
      scroll - if mag-scroll ang user then
 3rd line - 
      if statement - if na-cross ng user ang 50px na scroll magpapakita yung shadow na nakalagay sa css
-     else statement - if bumalik na yung user around 50 px, mare-remove yung shadow na
+     else statement - if bumalik na yung user around 50 px, mare-remove na yung shadow 
 */
 const header = $('siteHeader');
 window.addEventListener('scroll', () => {
@@ -47,10 +47,17 @@ window.addEventListener('scroll', () => {
 });
 
 
-/* haembeogeo (mobile nav)
-
-
-
+/* 4th part - haembeogeo (mobile nav)
+1st and 2nd line - helper
+3rd line - 
+     addEventListener - ipapakita ulit next ano need na action para ma-trigger
+     click - if mag-click yung user may mangyayari na
+4th line - "toggle - switch", isang button lang para ma-open and ma-close yung navbar
+next part 
+     window.innerWidth <= 768 - check if yung device is smaller screen
+     e.preventDefault(); - para hindi kaagad mag-open ng ibang webpage before mag-expand yung mega menunu
+     parent.classList... - hahanapin yung parent para ma-apply yung open style (idkk) 
+*/
 const hamburger = $('hamburger');
 const mainNav   = $('mainNav');
 
@@ -59,11 +66,9 @@ hamburger.addEventListener('click', () => {
   mainNav.classList.toggle('open');
 });
 
-// On mobile, clicking a nav item with a mega menu
-// toggles it open/closed instead of hovering
 $$('.nav-item.has-mega .nav-link').forEach(link => {
   link.addEventListener('click', e => {
-    // Only intercept clicks on small screens
+    // for small screens
     if (window.innerWidth <= 768) {
       e.preventDefault();
       const parent = link.closest('.nav-item');
@@ -73,9 +78,8 @@ $$('.nav-item.has-mega .nav-link').forEach(link => {
 });
 
 
-// =============================================
-//  5. SEARCH BAR TOGGLE
-// =============================================
+/* 5th part - search bar 
+
 const searchToggle = $('searchToggle');
 const searchBar    = $('searchBar');
 const searchInput  = $('searchInput');

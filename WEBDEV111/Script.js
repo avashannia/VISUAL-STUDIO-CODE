@@ -348,7 +348,7 @@ $$('.faq-q').forEach(btn => {
   });
 });
 
-
+/*
 // =============================================
 //  14. FOOTER CONTACT FORM
 //  Simple submission with a confirmation alert
@@ -375,7 +375,7 @@ $('footerSend').addEventListener('click', () => {
     $('footerSend').style.background = '';
   }, 3000);
 });
-
+*/
 
 // =============================================
 //  15. BACK TO TOP BUTTON

@@ -652,8 +652,8 @@ section { padding: 100px 5%; }
   position: relative;
   border-radius: 32px;
   overflow: hidden;
-  max-width: 480px; 
-  width: 100%;
+  /*max-width: 1500px; */
+  width: 800px;
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--yellow);
 }

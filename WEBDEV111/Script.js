@@ -1,29 +1,42 @@
-// =============================================
-//  CSSP Garments Trading – script.js
-//  Clean, well-commented Vanilla JS
-// =============================================
+// javascript tutorial 101 
 
-
-// ===== HELPER: grab elements easily =====
+/* 1st part is called "helper", shortcut for grabbing isang specific element 
+const - short for "constant", means never nagbabago, once na ma-set shortcut, it's okay na alw
+$ - nickname 
+id/sel - sel short for "selector"; more on "target" like anong element
+=> - arrow function!! ipo-point out ano gagawing action after
+document - the whole website element
+getElementById/querySelectorAll - para makuha yung target na u want
+*/
 const $ = id => document.getElementById(id);
 const $$ = sel => document.querySelectorAll(sel);
 
-// =============================================
-//  2. PRE-HEADER TICKER (Infinite scroll)
-//  Clones itself so the animation loops forever
-// =============================================
+/* 2nd part - "preheader infinite ticker"
+1st line - ginamit yung helper para short lang yung pagkuha sa variable 
+2nd line (if statement) - to make sure if meron ba talagang ticker 
+3rd line -
+     clone - duplicate or copy 
+     .innerHTML - yung content ng tickerTrack sa html like yung list 
+4th line - 
+     += - after ma-end yung list, ipapakita ulit yung nasa unahan kaagad para it looks infinite
+*/
 const tickerTrack = $('tickerTrack');
 if (tickerTrack) {
-  // Clone all the ticker items and append them
-  // This creates a seamless infinite loop effect
   const clone = tickerTrack.innerHTML;
   tickerTrack.innerHTML += clone; // duplicate content
 }
 
 
-// =============================================
-//  3. STICKY HEADER – adds shadow on scroll
-// =============================================
+/* 3rd part - "sticky header" if user is mag-scroll magkaka-shadow then maga-appear alw yung navbar!
+1st line - helper 
+2nd line - 
+     window - browser window (maglo-locate saang part na yung user sa webpage)
+     addEventListener - maga-assign ano action ang need gawin para ma-trigger
+     scroll - if mag-scroll ang user then
+3rd line - 
+     if statement - if na-cross ng user ang 50px na scroll magpapakita yung shadow na nakalagay sa css
+     else statement - if bumalik na yung user around 50 px, mare-remove na yung shadow 
+*/
 const header = $('siteHeader');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -34,9 +47,17 @@ window.addEventListener('scroll', () => {
 });
 
 
-// =============================================
-//  4. HAMBURGER MENU (Mobile nav toggle)
-// =============================================
+/* 4th part - haembeogeo (mobile nav)
+1st and 2nd line - helper
+3rd line - 
+     addEventListener - ipapakita ulit next ano need na action para ma-trigger
+     click - if mag-click yung user may mangyayari na
+4th line - "toggle - switch", isang button lang para ma-open and ma-close yung navbar
+next part 
+     window.innerWidth <= 768 - check if yung device is smaller screen
+     e.preventDefault(); - para hindi kaagad mag-open ng ibang webpage before mag-expand yung mega menunu
+     parent.classList... - hahanapin yung parent para ma-apply yung open style (idkk) 
+*/
 const hamburger = $('hamburger');
 const mainNav   = $('mainNav');
 
@@ -45,11 +66,9 @@ hamburger.addEventListener('click', () => {
   mainNav.classList.toggle('open');
 });
 
-// On mobile, clicking a nav item with a mega menu
-// toggles it open/closed instead of hovering
 $$('.nav-item.has-mega .nav-link').forEach(link => {
   link.addEventListener('click', e => {
-    // Only intercept clicks on small screens
+    // for small screens
     if (window.innerWidth <= 768) {
       e.preventDefault();
       const parent = link.closest('.nav-item');
@@ -59,9 +78,13 @@ $$('.nav-item.has-mega .nav-link').forEach(link => {
 });
 
 
-// =============================================
-//  5. SEARCH BAR TOGGLE
-// =============================================
+/* 5th part - search bar 
+lam mo na yan 
+1st to 3rd line - helper 
+7th line - 
+     focus - after ma-open, automatic mag-blink yung cursor yey
+... line - user can pindot esc sa keyboard then magdi-disappear na 
+*/
 const searchToggle = $('searchToggle');
 const searchBar    = $('searchBar');
 const searchInput  = $('searchInput');
@@ -69,11 +92,10 @@ const searchInput  = $('searchInput');
 searchToggle.addEventListener('click', () => {
   searchBar.classList.toggle('open');
   if (searchBar.classList.contains('open')) {
-    searchInput.focus(); // auto-focus the input when opened
+    searchInput.focus(); 
   }
 });
 
-// Close search bar if user presses Escape key
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     searchBar.classList.remove('open');
@@ -82,10 +104,16 @@ document.addEventListener('keydown', e => {
   }
 });
 
-
-// =============================================
-//  6. LIGHT / DARK MODE TOGGLE
-// =============================================
+/* 6th part - logo dim and light mode 
+1st paragraph - helper
+2nd paragraph -
+      1st line - 
+      localStorage - file handling sa c
+      'light' - default na choice 
+      2nd line - 
+      setAttribute - if pindutin ang data-them
+    
+*/
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon   = document.getElementById('themeIcon');
 const htmlEl      = document.documentElement;

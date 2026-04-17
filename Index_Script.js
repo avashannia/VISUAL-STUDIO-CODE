@@ -113,7 +113,7 @@ $$('#currencyDropdown li').forEach(item => {
     $('activeCurrency').textContent = chosen;
     $('currencyDropdown').classList.remove('open');
 
-    // Update all product price elements
+    // update all product price elements
     $$('.card-price').forEach(el => {
       const basePHP = parseFloat(el.getAttribute('data-base'));
       const { symbol, rate } = rates[chosen];
@@ -176,7 +176,7 @@ $$('.quick-add').forEach(btn => {
     cartCount++;
     $('cartBadge').textContent = cartCount;
 
-    // Brief bounce animation on the badge
+    // brief bounce animation on the badge
     $('cartBadge').style.transform = 'scale(1.4)';
     setTimeout(() => {
       $('cartBadge').style.transform = 'scale(1)';
